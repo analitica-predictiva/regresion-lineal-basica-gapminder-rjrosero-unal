@@ -59,7 +59,7 @@ def pregunta_02():
     print(df["life"].mean().round(4))
 
     # Imprima el tipo de dato de la columna `fertility`.
-    print(df["fertility"])
+    print(type(df["fertility"]))
 
     # Imprima la correlación entre las columnas `GDP` y `life` con 4 decimales.
     print(df["GDP"].corr(df["life"]).round(4))
@@ -89,8 +89,8 @@ def pregunta_03():
     # Crear el espacio de predicción. Esto es, usar linspace para crear un vector con valores entre el máximo y el mínimo de X_fertility
 
     prediction_space = np.linspace(
-        X_fertility.max(),
         X_fertility.min(),
+        X_fertility.max(),
     ).reshape(-1, 1)
 
     # Entrene el modelo usando X_fertility y y_life
