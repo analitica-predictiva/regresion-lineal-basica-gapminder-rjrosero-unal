@@ -91,8 +91,8 @@ def pregunta_03():
     # Crear el espacio de predicción. Esto es, usar linspace para crear un vector con valores entre el máximo y el mínimo de X_fertility
 
     prediction_space = np.linspace(
-        X_fertility_rs.min(),
-        X_fertility_rs.max(),
+        min(X_fertility_rs),
+        max(X_fertility_rs),
     ).reshape(-1, 1)
 
     # Entrene el modelo usando X_fertility y y_life
